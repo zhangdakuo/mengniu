@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>奶特</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/myanimate.css">
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/loading.js"></script>
+	<script src="js/jquery-ui-1.10.3.min.js"></script>
+	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="js/main.js"></script>
+
+</head>
+<script>
+	$(document).ready(function() {
+		$.fn.fullpage({
+			anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6','page7'],
+			menu: '#menu',
+			slidesNavigation:true,
+			afterRender:function () {
+				page1_up ()
+			},
+			onLeave:function (index) {
+				console.log(index)
+				switch(index){
+					case 1:
+					page1_down()
+					break;
+					case 2:
+					page2_down()
+					break;
+				}
+
+			},
+			afterLoad:function (index) {
+				console.log(index)
+				switch(index){
+					case 'page1':
+					page1_up ();
+					break;
+					case 'page2':
+					page2_up ();
+				}
+			}
+		})
+
+		function page1_up () {
+			$('.wf1').addClass('bounceInDown')
+			$('.wf2').addClass('flipInX_1s')
+			$('.wf3').addClass('flipInX_2s')
+			$('.wf4').addClass('flipInX_3s')
+			$('.wf5').addClass('bounceIn')
+		}
+		function page1_down () {
+			$('.wf1').removeClass('bounceInDown')
+			$('.wf2').removeClass('flipInX_1s')
+			$('.wf3').removeClass('flipInX_2s')
+			$('.wf4').removeClass('flipInX_3s')
+			$('.wf5').removeClass('bounceIn')
+		}
+		function page2_up () {
+			$('.audio span').eq(0).addClass('rollIn')
+			$('.audio span').eq(1).addClass('rollIn_1s')
+			$('.audio span').eq(2).addClass('rollIn_2s')
+			$('.audio span').eq(3).addClass('rollIn_3s')
+			$('.audio span').eq(4).addClass('rollIn_4s')
+			$('.audio span').eq(5).addClass('rollIn_5s')
+			$('.audio span').eq(6).addClass('rollIn_6s')
+			$('.audio span').eq(7).addClass('rollIn_7s')
+		}
+		function page2_down () {
+			$('.audio span').eq(0).removeClass('rollIn')
+			$('.audio span').eq(1).removeClass('rollIn_1s')
+			$('.audio span').eq(2).removeClass('rollIn_2s')
+			$('.audio span').eq(3).removeClass('rollIn_3s')
+			$('.audio span').eq(4).removeClass('rollIn_4s')
+			$('.audio span').eq(5).removeClass('rollIn_5s')
+			$('.audio span').eq(6).removeClass('rollIn_6s')
+			$('.audio span').eq(7).removeClass('rollIn_7s')
+		}
+	})
+</script>
+<body>
+	<div class="loading">
+		<img src="images/loading.gif" alt="">
+		<div class="loading_text">
+			<img src="images/loading.gif" alt="">
+		</div>
+	</div>
+	<div id="nav">
+		<a href="#page1" class="logo"></a>
+		<div class="select">
+			<p class="con">凡爱诚品</p>
+			<p class="icon"></p>
+			<p class="buy">立即购买</p>
+		</div>
+	</div>
+	<div id="nav1">
+		<ul id="menu">
+			<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+			<li data-menuanchor="page2"><a href="#page2">凡爱影像</a></li>
+			<li data-menuanchor="page3"><a href="#page3">全年套餐</a></li>
+			<li data-menuanchor="page4"><a href="#page4">半年套餐</a></li>
+			<li data-menuanchor="page5"><a href="#page5">套餐展示</a></li>
+			<li data-menuanchor="page6"><a href="#page6">奖励机制</a></li>
+			<li data-menuanchor="page7"><a href="#page7">排名</a></li>
+		</ul>
+	</div>	
+	<div id="down">
+		<img src="images/down.png" alt="">
+	</div>
+	<div class="section">
+		<div id="section1">
+			<div class="main1">
+				<span class="wf1"></span>
+				<span class="wf2"></span>
+				<span class="wf3"></span>
+				<span class="wf4"></span>pop
+				<span class="wf5"></span>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div id="section2">
+			<div class="section2_mb">
+				<div class="audio">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span>两种浪漫<br>随心选择</span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div id="section3">
+			<div class="section3_left"></div>
+			<div class="section3_right">
+				<div class="icon1"></div>
+				<div class="con"></div>
+				<div class="mike1"></div>
+				<div class="mike2"></div>
+				<div class="mike3"></div>
+				<div class="jieshao">
+					<div class="js_tiele">
+						<span class="tiele_left"></span>
+						<span class="tiele_main">一年24箱奶特 + 凡凡暖心毯</span>
+						<span class="tiele_right"></span>
+					</div>
+					<div class="cost"></div>
+					<div class="price_box">
+						<div class="referral">凡凡心意价</div>
+						<div class="price">
+							<span>1699</span>
+							<span>/</span>
+							<span>份</span>
+						</div>
+					</div>
+					<div class="right_select">
+						<div class="selects">
+							<select name="select" id="select">
+								<option value="曼妙香蕉">曼妙香蕉</option>  
+								<option value="2">浪漫香草</option>  
+								<option value="3" >浓情朱古力</option>  
+								<option value="4">混合口味装</option>
+							</select>
+						</div>
+						<div class="num">
+							<span>-</span>
+							<input type="text"  value="">
+							<span>+</span>
+						</div>
+					</div>
+					<div class="jieshao_buy">
+						<p class="buys">立即购买</p>
+					</div>
+					<div class="prompt">
+						<p>*凡爱诚品全年装12月1日首次发货，</p>
+						<p>奶特每月2箱，每月1号免费配送。</p>
+						<p>（温馨提醒：除质量问题外，本产品不予退换）<a href="#">更多详情</a></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>		
+	</div>
+	<div class="section">
+		<div id="section4">
+			<div class="section4_right"></div>
+			<div class="section4_left">
+				<div class="icon1"></div>
+				<div class="con"></div>
+				<div class="mike1"></div>
+				<div class="mike2"></div>
+				<div class="mike3"></div>
+				<div class="jieshao">
+					<div class="js_tiele">
+						<span class="tiele_left"></span>
+						<span class="tiele_main">半年12箱奶特 + 凡凡暖心毯</span>
+						<span class="tiele_right"></span>
+					</div>
+					<div class="cost"></div>
+					<div class="price_box">
+						<div class="referral">凡凡心意价</div>
+						<div class="price">
+							<span>849</span>
+							<span>/</span>
+							<span>份</span>
+						</div>
+					</div>
+					<div class="right_select">
+						<div class="selects">
+							<select name="select" id="select">
+								<option value="曼妙香蕉">曼妙香蕉</option>  
+								<option value="2">浪漫香草</option>  
+								<option value="3" >浓情朱古力</option>  
+								<option value="4">混合口味装</option>
+							</select>
+						</div>
+						<div class="num">
+							<span>-</span>
+							<input type="text"  value="">
+							<span>+</span>
+						</div>
+					</div>
+					<div class="jieshao_buy">
+						<p class="buys">立即购买</p>
+					</div>
+					<div class="prompt">
+						<p>*凡爱诚品全年装12月1日首次发货，</p>
+						<p>奶特每月2箱，每月1号免费配送。</p>
+						<p>（温馨提醒：除质量问题外，本产品不予退换）<a href="#">更多详情</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<div class="slide"><img class="scro1" src="images/page5_scro1.jpg" alt=""></div>
+		<div class="slide"><img class="scro1"  src="images/page5_scro2.jpg" alt=""></div>
+		<div class="slide"><img class="scro1"  src="images/page5_scro3.jpg" alt=""></div>
+	</div>
+	<div class="section">
+		<div id="section6">
+			<div class="signature"></div>
+		</div>
+	</div>
+	<div class="section">
+		<div id="section7">
+			<div class="ranking">
+				<div class="box">
+					<div class="ranking_1"></div>
+					<div class="ranking_2">
+						<div class="heads">
+							<div class="left1">
+								<p class="left2">尾号</br><span>0056</span></p>
+								<p class="left3">20</p>
+							</div>
+						</div>
+						<div class="heads1">
+							<div class="left1s">
+								<p class="left2">尾号</br><span>0056</span></p>
+								<p class="left3">20</p>
+							</div>
+						</div>
+						<div class="heads">
+							<div class="left1">
+								<p class="left2">尾号</br><span>0056</span></p>
+								<p class="left3">20</p>
+							</div>
+						</div>
+					</div>
+					<div class="bodys">
+						<ul>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="kong"></div>
+				<div class="box">
+					<div class="ranking_1 ranking_back"></div>
+					<div class="ranking_2">
+						<div class="heads">
+							<div class="left1">
+								<p class="left2">尾号</br><span>0056</span></p>
+								<p class="left3">20</p>
+							</div>
+						</div>
+						<div class="heads1">
+							<div class="left1s">
+								<p class="left2">尾号</br><span>0056</span></p>
+								<p class="left3">20</p>
+							</div>
+						</div>
+						<div class="heads">
+							<div class="left1">
+								<p class="left2">尾号</br><span>0056</span></p>
+								<p class="left3">20</p>
+							</div>
+						</div>
+					</div>
+					<div class="bodys">
+						<ul>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+							<li>
+								<span class="num">1.</span>
+								<span class="num2">13888888888</span>
+								<span class="num3">88</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
